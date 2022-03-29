@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -webkit-user-select: none;   
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--white);
+    width: 280px;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.card img {
+    -webkit-user-drag: none;
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1); 
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+
+    transition: 100ms ease-in-out;
+}
+
+.card img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.p1 {
+    color: var(--dark-blue);
+    font-weight: 700;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.p2 {
+    color: var(--grayish-blue);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 320px) {
+    .card {
+        width: 220px;
+    }
+
+    .card img {
+        width: 200px;
+        height: auto;
+    }
+}
